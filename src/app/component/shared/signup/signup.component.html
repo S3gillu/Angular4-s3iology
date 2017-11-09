@@ -1,0 +1,100 @@
+<div class="jumbotron">
+  <h1> <strong> Welcome !! to  <strong style="color:orangered">s3iology</strong> </strong>
+  </h1>
+  <h2> Please provide your details below and <strong style="color:coral">SignUp</strong> with us </h2>
+
+  <form [formGroup]="signupForm" (ngSubmit)="submitForm1(signupForm.value)">
+
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['firstName'].valid && signupForm.controls['firstName'].touched}">
+          <label><strong>First Name</strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-user"></i></div>
+            <input class="form-control" type="text" placeholder="Enter First Name" [formControl]="signupForm.controls['firstName']">
+          </div>
+          <div *ngIf="signupForm.controls['firstName'].touched && signupForm.controls['firstName'].hasError('required')" class="alert alert-danger">
+            First Name is Required
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['lastName'].valid && signupForm.controls['lastName'].touched}">
+          <label><strong>Last Name</strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-user"></i></div>
+            <input class="form-control" type="text" placeholder="Enter Last Name" [formControl]="signupForm.controls['lastName']">
+          </div>
+          <div *ngIf="signupForm.controls['lastName'].touched && signupForm.controls['lastName'].hasError('required')" class="alert alert-danger">
+            Last Name is Required
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['gender'].valid && signupForm.controls['gender'].touched}">
+          <label><strong>Gender</strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-users"></i></div>
+            <select class="form-control" formControlName="gender"  [formControl]="signupForm.controls['gender']">
+             <option value="" disabled="true" [selected]="!gender">Select Gender</option>
+              <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
+            </select>
+          </div>
+          <div *ngIf="signupForm.controls['gender'].touched && signupForm.controls['gender'].hasError('required')" class="alert alert-danger">
+            Gender is Required
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['email'].valid && signupForm.controls['email'].touched}">
+          <label><strong>Email</strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-envelope"></i></div>
+            <input class="form-control" type="email" placeholder="Enter Email" [formControl]="signupForm.controls['email']">
+          </div>
+          <div *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].hasError('required')" class="alert alert-danger">
+            Email is Required
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['address'].valid && signupForm.controls['address'].touched}">
+          <label><strong>Address</strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-address-book"></i></div>
+            <input class="form-control" type="text" placeholder="Enter Address" [formControl]="signupForm.controls['address']">
+          </div>
+          <div *ngIf="signupForm.controls['address'].touched && signupForm.controls['address'].hasError('required')" class="alert alert-danger">
+            Address is Required
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['contactno'].valid && signupForm.controls['contactno'].touched}">
+          <label><strong>Contact Number</strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-phone-square"></i></div>
+            <input class="form-control" type="text" placeholder="Enter Contact Number" [formControl]="signupForm.controls['contactno']">
+          </div>
+          <div *ngIf="signupForm.controls['contactno'].touched && signupForm.controls['contactno'].hasError('required')" class="alert alert-danger">
+            Contact Number is Required
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['dob'].valid && signupForm.controls['dob'].touched}">
+          <label><strong>Date Of Birth</strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-calendar"></i></div>
+            <input class="form-control" type="text" placeholder="Enter Date Of Birth" [formControl]="signupForm.controls['dob']">
+          </div>
+          <div *ngIf="signupForm.controls['dob'].touched && signupForm.controls['dob'].hasError('required')" class="alert alert-danger">
+            Date Of Birth is Required
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-outline-info my-2 my-sm-0" style="text-align: center;" [disabled]="!signupForm.valid">SignUp</button>
+        <button type="reset" class="btn btn-outline-info my-2 my-sm-0">
+            <i class="fa fa-repeat" aria-hidden="true"></i> Reset</button>
+      </div>
+    </div>
+  </form>
+
+
+</div>
