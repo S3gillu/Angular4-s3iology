@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators , FormControl} from '@angular/forms';
 
 
 @Component({
@@ -18,14 +18,16 @@ export class LoginComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
     this.loginForm = fb.group({
-      'username': [null, Validators.required],
-      'password': [null, Validators.required]
+      username: [ '',[Validators.required, Validators.minLength(4),Validators.maxLength(15)]],
+      password: [ '',[Validators.required, Validators.minLength(6),Validators.maxLength(20)]]
     })
   }
 
 
   submitForm(value: any) {
+    if(this.loginForm != null)
     console.log(value)
+    this.loginForm.reset()
   }
 
 }

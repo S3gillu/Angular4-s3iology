@@ -13,7 +13,9 @@ h2{
     text-align: center;
     border-bottom: 2px solid #eeeeee
 }
-.account{text-align: center; margin-top: 30px;}
+.account{text-align: center; margin-top: 0px;}
+.forget-password{text-align: center; margin-top:20px; font-size: 12px; }
+
 
 a:hover{text-decoration: none;color: #dd2c00 ;}
 
@@ -29,7 +31,41 @@ a:hover{text-decoration: none;color: #dd2c00 ;}
 input.ng-invalid.ng-dirty{
     border:1px solid red; 
 }
+input.ng-valid.ng-dirty{
+    border:1px solid #51C722; 
+}
 .row{
     margin-top: 30px;
 }
 
+ #checkbox {
+    margin-left: 10px;
+} 
+.remember{
+    color: #0E0F0F ;
+    display: inline-block;
+    position: relative;
+}
+/* div{
+    position: relative;
+    animation: myfirst 6s ;
+}
+@keyframes myfirst {
+    0%   {right: -555px; top: 0px;}
+    25%  { right: 0px; }
+   
+} */
+
+div,h1,p{
+    position: relative;
+    animation: myfirst1 6s ;
+}
+@keyframes myfirst1 {
+    0%   {left: -555px; top: 0px;}
+    25%  { left: 0px; }
+   
+}
+
+.uName,.password{
+    color:red;
+}

@@ -22,6 +22,60 @@ h2{
         display: flex;
         align-items: center;
          } 
+
  input.ng-invalid.ng-dirty{
             border:1px solid red; 
         }
+input.ng-valid.ng-dirty{
+                border:1px solid #51C722; 
+            }
+
+textarea.ng-valid.ng-dirty{
+    border:1px solid #51C722; 
+}  
+textarea.ng-invalid.ng-dirty{
+    border:1px solid red; 
+}      
+
+select.ng-valid.ng-dirty{
+    border:1px solid #51C722; 
+}   
+
+
+.wrapper{
+    text-align: center;
+}
+
+.account{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 15px;
+    color: rgba(212, 117, 27, 0.99);
+}
+
+a:hover{text-decoration: none;color: #dd2c00 ;}
+
+.fName,.lName,.uName,.password,.confirmPassword,.gender,.email,.address,.contact,.dob{
+    color: red;
+}
+
+:host /deep/.tooltip.bs-tooltip-top {
+   width: 400px;
+   margin-bottom: 10px;
+}
+:host /deep/ .bs-tooltip-top[_nghost-c2]   .arrow[_ngcontent-c2]{
+    left:46%;
+}
+
+div,h1,p{
+    position: relative;
+    animation: myfirst 10s ;
+}
+@keyframes myfirst {
+    0%   {left: -200px; top: 0px;}
+    25%  { left: 0px; }
+   
+}
+ 
+p{color:maroon;}
+

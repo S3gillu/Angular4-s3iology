@@ -6,6 +6,7 @@ const routes : Routes = [
   {
       path :'',
       loadChildren : './component/shared/shared.module#SharedModule',
+    
   },
   {
       path : '**',

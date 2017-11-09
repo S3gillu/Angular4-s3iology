@@ -6,28 +6,29 @@ import { RouterModule } from '@angular/router';
 import { SharedComponent } from './shared.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { ReactiveFormsModule} from '@angular/forms';
-
-
-
-
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { AuthGuard } from './guard/auth.guard';
 
 @NgModule({
 
     declarations: [
         SharedComponent,
         LoginComponent,
-        SignupComponent
+        SignupComponent,
+        ForgetPasswordComponent
     ],
     imports: [
         CommonModule,
         SharedRoutingModule,
         RouterModule,
-        ReactiveFormsModule
-       
+        ReactiveFormsModule,
+        FormsModule,
+        NgbModule,
+        
     ],
-    providers: []
+    providers: [AuthGuard]
 })
 
 export class SharedModule {
