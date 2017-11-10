@@ -55,7 +55,7 @@ select.ng-valid.ng-dirty{
 
 a:hover{text-decoration: none;color: #dd2c00 ;}
 
-.fName,.lName,.uName,.password,.confirmPassword,.gender,.email,.address,.contact,.dob{
+.fName,.lName,.uName,.password,.confirmPassword,.gender,.email,.address,.contact,.dob,.country,.state,.maritalStatus{
     color: red;
 }
 
@@ -69,7 +69,7 @@ a:hover{text-decoration: none;color: #dd2c00 ;}
 
 div,h1,p{
     position: relative;
-    animation: myfirst 10s ;
+    animation: myfirst 6s ;
 }
 @keyframes myfirst {
     0%   {left: -200px; top: 0px;}

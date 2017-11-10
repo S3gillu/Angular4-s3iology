@@ -13,8 +13,8 @@
           <label><strong>First Name <span style="color:red;">*</span></strong></label>
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-user"></i></div>
-            <input class="form-control" type="text" (keypress)="a($event)"  placeholder="Enter First Name" [formControl]="signupForm.controls['firstName']">
-            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Enter only alphabets" style="color: maroon" ></i></div>
+            <input class="form-control" type="text" (keypress)="a($event)" placeholder="Enter First Name" [formControl]="signupForm.controls['firstName']">
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Enter only alphabets" style="color: maroon"></i></div>
           </div>
           <div *ngIf="signupForm.controls['firstName'].touched || signupForm.controls['firstName'].dirty">
             <div *ngIf="signupForm.controls['firstName'].hasError('required')" class="fName"> First Name is Required</div>
@@ -27,8 +27,8 @@
           <label><strong>Last Name <span style="color:red;">*</span></strong></label>
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-user"></i></div>
-            <input class="form-control" type="text"  (keypress)="a($event)"  placeholder="Enter Last Name" [formControl]="signupForm.controls['lastName']">
-            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Enter only alphabets" style="color: maroon" ></i></div>
+            <input class="form-control" type="text" (keypress)="a($event)" placeholder="Enter Last Name" [formControl]="signupForm.controls['lastName']">
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Enter only alphabets" style="color: maroon"></i></div>
           </div>
           <div *ngIf="signupForm.controls['lastName'].touched || signupForm.controls['lastName'].dirty">
             <div *ngIf="signupForm.controls['lastName'].hasError('required')" class="lName"> Last Name is Required</div>
@@ -42,7 +42,8 @@
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-user"></i></div>
             <input class="form-control" type="text" placeholder="Enter User Name" [formControl]="signupForm.controls['username']">
-            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="It must contain atleast one uppercase letter, one lowercase letter and one number with minimum length of 4 and maximum length of 16 " style="color: maroon" ></i></div>
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="It must contain atleast one uppercase letter, one lowercase letter and one number with minimum length of 4 and maximum length of 16 "
+                style="color: maroon"></i></div>
           </div>
           <div *ngIf="signupForm.controls['username'].touched || signupForm.controls['username'].dirty">
             <div *ngIf="signupForm.controls['username'].hasError('required')" class="uName"> User name is Required</div>
@@ -55,8 +56,9 @@
           <label><strong>Password <span style="color:red;">*</span></strong></label>
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-key"></i></div>
-            <input class="form-control" type="password" placeholder="Enter Password" [formControl]="signupForm.controls['password']" formControlName="password" >
-            <div class="input-group-addon"> <i class="fa fa-info-circle " placement="top" ngbTooltip="Must of mimimum length 6 and maximum length 20" style="color: maroon" ></i></div>
+            <input class="form-control" type="password" placeholder="Enter Password" [formControl]="signupForm.controls['password']"
+              formControlName="password">
+            <div class="input-group-addon"> <i class="fa fa-info-circle " placement="top" ngbTooltip="Must of mimimum length 6 and maximum length 20" style="color: maroon"></i></div>
           </div>
           <div *ngIf="signupForm.controls['password'].touched || signupForm.controls['password'].dirty">
             <div *ngIf="signupForm.controls['password'].hasError('required')" class="password"> Password is Required</div>
@@ -69,8 +71,9 @@
           <label><strong>Confirm Password <span style="color:red;">*</span></strong></label>
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-key"></i></div>
-            <input class="form-control" type="password"   placeholder="Confirm Password" [formControl]="signupForm.controls['Confirmpassword']" formControlName="Confirmpassword">
-            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Must be same as password" style="color: maroon" ></i></div>
+            <input class="form-control" type="password" placeholder="Confirm Password" [formControl]="signupForm.controls['Confirmpassword']"
+              formControlName="Confirmpassword">
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Must be same as password" style="color: maroon"></i></div>
           </div>
           <div *ngIf="signupForm.controls['Confirmpassword'].touched || signupForm.controls['Confirmpassword'].dirty">
             <div *ngIf="checkPass" class="confirmPassword"> Password mis matched </div>
@@ -78,31 +81,65 @@
         </div>
 
 
-      </div>
-      <div class="col-md-4">
-
         <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['gender'].valid && signupForm.controls['gender'].touched}">
           <label><strong>Gender <span style="color:red;">*</span></strong></label>
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-users"></i></div>
-            <select class="form-control"  formControlName="gender" [formControl]="signupForm.controls['gender']">            
+            <select class="form-control" formControlName="gender" [formControl]="signupForm.controls['gender']">            
               <option value='' disabled="true" [selected]="!gender">Select Gender</option>
               <option *ngFor="let gender of genders" [value]="gender">  
                 {{gender}}</option>
             </select>
-            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Here specify your gender" style="color: maroon" ></i></div>
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Here specify your gender" style="color: maroon"></i></div>
           </div>
           <div *ngIf="signupForm.controls['gender'].touched && signupForm.controls['gender'].hasError('required')" class="gender">
             Gender is Required
           </div>
         </div>
 
+       
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['maritalStatus'].valid && signupForm.controls['maritalStatus'].touched}">
+          <label><strong>Marital Status <span style="color:red;">*</span></strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-users"></i></div>
+            <select class="form-control" formControlName="maritalStatus" [formControl]="signupForm.controls['maritalStatus']">            
+              <option value='' disabled="true" [selected]="">Select Marital Status</option>
+              <option *ngFor="let marital of maritalStatus" [value]="marital">  
+                {{marital}}</option>
+            </select>
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Here specify your Marital Status" style="color: maroon"></i></div>
+          </div>
+          <div *ngIf="signupForm.controls['maritalStatus'].touched && signupForm.controls['maritalStatus'].hasError('required')" class="maritalStatus">
+            Marital Status Required
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-4">
+
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['dob'].valid && signupForm.controls['dob'].touched}">
+          <label><strong>Date Of Birth <span style="color:red;">*</span></strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-calendar"></i></div>
+            <input class="form-control" name="dp" ngbDatepicker #d="ngbDatepicker" type="text" placeholder="Enter Date Of Birth" [formControl]="signupForm.controls['dob']"
+              (click)="d.toggle()">
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Here specify your DOB" style="color: maroon"></i></div>
+          </div>
+          <div *ngIf="signupForm.controls['dob'].touched && signupForm.controls['dob'].hasError('required')" class="dob">
+            Date Of Birth is Required
+          </div>
+        </div>
+
+
         <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['email'].valid && signupForm.controls['email'].touched}">
           <label><strong>Email <span style="color:red;">*</span></strong></label>
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-envelope"></i></div>
             <input class="form-control" type="email" placeholder="Enter Email" [formControl]="signupForm.controls['email']">
-            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Must be like example@email.com" style="color: maroon" ></i></div>
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Must be like example@email.com" style="color: maroon"></i></div>
           </div>
           <div *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].hasError('required')" class="email">
             Email is Required
@@ -114,7 +151,7 @@
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-address-book"></i></div>
             <textarea class="form-control" type="text" placeholder="Enter Address" rows="1" [formControl]="signupForm.controls['address']"></textarea>
-            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Must not exceed 255 characters" style="color: maroon" ></i></div>
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Must not exceed 255 characters" style="color: maroon"></i></div>
           </div>
           <div *ngIf="signupForm.controls['address'].touched && signupForm.controls['address'].hasError('required')" class="address">
             Address is Required
@@ -125,25 +162,63 @@
           <label><strong>Contact Number <span style="color:red;">*</span></strong></label>
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-phone-square"></i></div>
-            <input class="form-control" type="text" (keypress)="restrictNumeric($event)"  placeholder="Enter Contact Number"  [formControl]="signupForm.controls['contactno']">
-            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Must be of 10 digits" style="color: maroon" ></i></div>            
+            <input class="form-control" type="text" (keypress)="restrictNumeric($event)" placeholder="Enter Contact Number" [formControl]="signupForm.controls['contactno']">
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Must be of 10 digits" style="color: maroon"></i></div>
           </div>
           <div *ngIf="signupForm.controls['contactno'].touched && signupForm.controls['contactno'].hasError('required')" class="contact">
             Contact Number is Required
           </div>
         </div>
 
-        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['dob'].valid && signupForm.controls['dob'].touched}">
-          <label><strong>Date Of Birth <span style="color:red;">*</span></strong></label>
-          <div class="input-group">
-            <div class="input-group-addon"> <i class="fa fa-calendar"></i></div>
-            <input class="form-control" name="dp" ngbDatepicker #d="ngbDatepicker" type="text" placeholder="Enter Date Of Birth" [formControl]="signupForm.controls['dob']"
-              (click)="d.toggle()">
-              <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Here specify your DOB" style="color: maroon" ></i></div>
-          </div>
 
-          <div *ngIf="signupForm.controls['dob'].touched && signupForm.controls['dob'].hasError('required')" class="dob">
-            Date Of Birth is Required
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['country'].valid && signupForm.controls['country'].touched}">
+          <label><strong>Country <span style="color:red;">*</span></strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-globe"></i></div>
+            <select class="form-control" *ngIf="getCountries()" id="country" (change)="onSelectCountry($event.target.value)" formControlName="country"
+              [formControl]="signupForm.controls['country']">
+              <option value='' disabled="true" [selected]="">Select Country</option>
+              <option *ngFor="let country of getCountries()" value={{country.id}}>  
+                {{country.name}}</option>
+            </select>
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Here specify your Country" style="color: maroon"></i></div>
+          </div>
+          <div *ngIf="signupForm.controls['country'].touched && signupForm.controls['country'].hasError('required')" class="country">
+            Country is Required
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['state'].valid && signupForm.controls['state'].touched}">
+          <label><strong>State <span style="color:red;">*</span></strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-globe"></i></div>
+            <select class="form-control" *ngIf="states" id="state" (change)="onSelectState($event.target.value)" formControlName="state"
+              [formControl]="signupForm.controls['state']">            
+             
+              <option value='' disabled="true" [selected]="">Select State</option>
+              <option *ngFor="let state of states" value={{state.id}}>  
+                {{state.name}}</option>
+            </select>
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Here specify your State" style="color: maroon"></i></div>
+          </div>
+          <div *ngIf="signupForm.controls['state'].touched && signupForm.controls['state'].hasError('required')" class="state">
+            State is Required
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error':!signupForm.controls['city'].valid && signupForm.controls['city'].touched}">
+          <label><strong>City <span style="color:red;">*</span></strong></label>
+          <div class="input-group">
+            <div class="input-group-addon"> <i class="fa fa-globe"></i></div>
+            <select class="form-control" id="city" formControlName="city" [formControl]="signupForm.controls['city']">            
+              <option  *ngIf="!selectedState" value="" disabled="true" [selected]="">Select City</option>
+              <option *ngFor="let city of cities" value={{city.id}}>  
+                {{city.name}}</option>
+            </select>
+            <div class="input-group-addon"> <i class="fa fa-info-circle" placement="top" ngbTooltip="Here specify your city" style="color: maroon"></i></div>
+          </div>
+          <div *ngIf="signupForm.controls['state'].touched && signupForm.controls['state'].hasError('required')" class="state">
+            City is Required
           </div>
         </div>
 
@@ -156,24 +231,28 @@
     </div>
 
     <div class="wrapper">
-      <button type="submit" (click)="open(content)"  class="btn btn-outline-info my-2 my-sm-0" routerLink="/login" style="text-align: center;" [disabled]="!signupForm.valid"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</button>
+      <button type="submit" (click)="open(content)" class="btn btn-outline-info my-2 my-sm-0" routerLink="/login" style="text-align: center;"
+        [disabled]="!signupForm.valid"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</button>
       <p class="account">Already have an account with us ? <a routerLink="/login"> <strong>LogIn </strong> </a> here </p>
-      <p>By signing up, you agree to the <strong style="color:orangered;">s3iology.com</strong> Service <a routerLink="/termsCondition"> <strong>Terms & Conditions </strong> </a> and the <a routerLink="/termsCondition"> <strong>Privacy Policy </strong> </a>.</p>
+      <p>By signing up, you agree to the <strong style="color:orangered;">s3iology.com</strong> Service <a routerLink="/termsCondition"> <strong>Terms & Conditions </strong> </a>        and the <a routerLink="/termsCondition"> <strong>Privacy Policy </strong> </a>.</p>
     </div>
+
+
   </form>
+
   <ng-template #content let-c="close" let-d="dismiss">
-      <div class="modal-header">
-        <h4 class="modal-title"><strong>Thank You for registering with us</strong></h4>
-        <button type="button" class="close" aria-label="Close"  (click)="d('Cross click')">
+    <div class="modal-header">
+      <h4 class="modal-title"><strong>Thank You for registering with us</strong></h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        <p>After closing this modal you will find yourself on login page </p>
-        <p>Enter username and password to the specified fields and then click on login to explore our website</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark"  (click)="c('Close click')">Close</button>
-      </div>
-    </ng-template>
+    </div>
+    <div class="modal-body">
+      <p>After closing this modal you will find yourself on login page </p>
+      <p>Enter username and password to the specified fields and then click on login to explore our website</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+  </ng-template>
 </div>
