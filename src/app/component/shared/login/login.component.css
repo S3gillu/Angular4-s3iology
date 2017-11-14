@@ -69,3 +69,6 @@ div,h1,p{
 .uName,.password{
     color:red;
 }
+.jumbotron{
+    padding-top:5px;
+}

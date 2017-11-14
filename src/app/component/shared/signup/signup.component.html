@@ -211,7 +211,7 @@
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-globe"></i></div>
             <select class="form-control" id="city" formControlName="city" [formControl]="signupForm.controls['city']">            
-              <option  *ngIf="!selectedState" value="" disabled="true" [selected]="">Select City</option>
+              <option   value="" disabled="true" [selected]="">Select City</option>
               <option *ngFor="let city of cities" value={{city.id}}>  
                 {{city.name}}</option>
             </select>
