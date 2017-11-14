@@ -9,7 +9,7 @@
       <!-- <div class="col-md-4"></div> -->
       <div class="col-xl-4 col-md-6   col-xl-offset-4 col-md-offset-3"  style="margin:0 auto;">
         <div class="form-group" [ngClass]="{'has-error':!loginForm.controls['username'].valid && loginForm.controls['username'].touched}">
-          <label><strong>Username</strong></label>
+          <label><strong style="color:orangered">Username</strong></label>
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-user"></i></div>
             <input class="form-control" type="text" placeholder="Enter Username" [formControl]="loginForm.controls['username']">
@@ -20,7 +20,7 @@
         </div>
 
         <div class="form-group" [ngClass]="{'has-error':!loginForm.controls['password'].valid && loginForm.controls['password'].touched}">
-          <label><strong>Password</strong></label>
+          <label><strong style="color:orangered">Password</strong></label>
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-unlock-alt"></i></div>
             <input class="form-control" type="text" placeholder="Enter Password" [formControl]="loginForm.controls['password']">
@@ -31,14 +31,14 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-outline-info my-2 my-sm-0" style="text-align: center;" routerLink="/signup" [disabled]="!loginForm.valid"> <i class="fa fa-sign-in" aria-hidden="true"></i> Log In</button>
-        <input type="checkbox" id=checkbox > <p class="remember">Remember me </p>
+        <button type="submit" class="btn btn-outline-info my-2 my-sm-0" style="text-align: center;color:#F5DD08; " routerLink="/signup" [disabled]="!loginForm.valid"> <i class="fa fa-sign-in" aria-hidden="true"></i> Log In</button>
+        <input type="checkbox" id=checkbox > <p class="remember" style="color:#69f0ae ">Remember me </p>
 
       </div>
     </div>
 
   </form>
-  <p class="forget-password"> <a routerLink="/forgetPassword"> Lost Your Password? Click here to reset </a> </p>
-  <p class="account"> Are you new to <strong style="color : orangered">s3iology</strong> ? <a routerLink="/signup"> <strong>SignUp </strong> </a>    here </p>
+  <p class="forget-password"> <a class="aclass" routerLink="/forgetPassword"> Lost Your Password? Click here to reset </a> </p>
+  <p class="account" style="color:#2BF7DB"> Are you new to <strong style="color : orangered">s3iology</strong> ? <a class="aclass1" routerLink="/signup"> <strong>SignUp </strong> </a>    here </p>
 
 </div>

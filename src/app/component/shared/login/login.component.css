@@ -1,23 +1,21 @@
-h1{
 
+h1{
     margin-top: 15px;
     padding-bottom: 15px;
     text-align: center;
-    border-bottom: 2px solid #eeeeee
 }
 
 h2{
-    color: #4db6ac ;
-    margin-top: 15px;
+    color: rgb(199, 88, 71) ;
     padding-bottom: 15px;
-    text-align: center;
-    border-bottom: 2px solid #eeeeee
+    text-align: center; 
 }
 .account{text-align: center; margin-top: 0px;}
-.forget-password{text-align: center; margin-top:20px; font-size: 12px; }
+.forget-password{text-align: center; margin-top:20px; font-size: 15px;}
+.aclass{color:#2BF7DB; }
 
 
-a:hover{text-decoration: none;color: #dd2c00 ;}
+a:hover{text-decoration: none;color: #F5CA0C ; }
 
 .alert{
     width:200px;
@@ -69,6 +67,12 @@ div,h1,p{
 .uName,.password{
     color:red;
 }
-.jumbotron{
-    padding-top:5px;
+.jumbotron{ 
+        background-image: url(/assets/images/blog-banner.jpg);
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size:  cover !important;
+}
+.aclass1{
+    color:#4fc3f7 ;
 }

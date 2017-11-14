@@ -2,19 +2,20 @@ h1{
           margin-top: 15px;
         padding-bottom: 15px;
         text-align: center;
-        border-bottom: 2px solid #eeeeee
  }
     
 h2{
         color: #4db6ac ;
-        margin-top: 30px;
         padding-bottom: 15px;
         text-align: center;
         border-bottom: 2px solid #eeeeee
     }
 
 .jumbotron{
-    padding-top:5px;
+    background-image: url(/assets/images/banner.jpg);
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size:  cover !important;
 }    
 
 .alert{
@@ -54,7 +55,7 @@ select.ng-valid.ng-dirty{
     margin-top: 25px;
     text-align: center;
     font-size: 15px;
-    color: rgba(212, 117, 27, 0.99);
+    color: rgba(102, 250, 17, 0.99);
 }
 
 a:hover{text-decoration: none;color: #dd2c00 ;}
@@ -81,5 +82,8 @@ div,h1,p{
    
 }
  
-p{color:maroon;}
+p{color:#87F30B;}
 
+.a1,.a2,.a3{
+    color:goldenrod
+}
