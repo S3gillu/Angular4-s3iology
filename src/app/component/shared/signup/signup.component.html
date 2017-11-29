@@ -86,7 +86,7 @@
           <div class="input-group">
             <div class="input-group-addon"> <i class="fa fa-users"></i></div>
             <select class="form-control" formControlName="gender" [formControl]="signupForm.controls['gender']">            
-              <option value='' disabled="true" [selected]="!gender">Select Gender</option>
+              <option value='' disabled="true" [selected]="">Select Gender</option>
               <option *ngFor="let gender of genders" [value]="gender">  
                 {{gender}}</option>
             </select>
